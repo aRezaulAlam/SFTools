@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -47,7 +48,7 @@ public class AppConfig extends WebMvcConfigurerAdapter{
         internalResourceViewResolver.setSuffix(".jsp");
         return internalResourceViewResolver;
     }
-/*
+
 
     @Bean
     public JavaMailSenderImpl javaMailSenderImpl(){
@@ -55,9 +56,9 @@ public class AppConfig extends WebMvcConfigurerAdapter{
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
         //Set gmail email id
-        mailSender.setUsername("arvindraivns06@gmail.com");
+        mailSender.setUsername("arezaulalam@gmail.com");
         //Set gmail email password
-        mailSender.setPassword("password");
+        mailSender.setPassword("ttetrapsyco51");
         Properties prop = mailSender.getJavaMailProperties();
         prop.put("mail.transport.protocol", "smtp");
         prop.put("mail.smtp.auth", "true");
@@ -65,7 +66,8 @@ public class AppConfig extends WebMvcConfigurerAdapter{
         prop.put("mail.debug", "true");
         return mailSender;
     }
-*/
+
+
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
